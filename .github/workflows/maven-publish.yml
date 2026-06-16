@@ -26,9 +26,9 @@ jobs:
     - name: Run tests
       run: mvn test
     
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v3
-      if: always()
-      with:
+    # - name: Upload artifacts
+    # continue-on-error:    uses: actions/upload-artifact@v3
+     if: always()
+        with:
         name: build-artifacts
         path: target/
